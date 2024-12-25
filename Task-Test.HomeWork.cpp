@@ -36,11 +36,11 @@ public:
     Rectangle(double width, double height) : width(width), height(height) {}
 
     double calculateArea() const override {
-        if (width == 0 || height == 0) { // implement the log
+        if (width <= 0 || height <= 0) { // implement the log
             throw logic_error("Invalid dimensions for Rectangle.");
         }
         // implement the log
-        throw logic_error("Rectangle area logic is not implemented.");
+        return width * height;
     }
 
     void displayInfo() const override {
@@ -56,11 +56,11 @@ public:
     Circle(double radius) : radius(radius) {}
 
     double calculateArea() const override {
-        if (radius == 0) { // implement the log
+        if (radius <= 0) { // implement the log
             throw logic_error("Invalid radius for Circle.");
         }
         // implement the log
-        throw logic_error("Circle area logic is not implemented.");
+        return 3.14 * radius * radius;
     }
 
     void displayInfo() const override {
